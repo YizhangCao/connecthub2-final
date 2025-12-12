@@ -1,0 +1,245 @@
+/* =============================================================================
+   ContactDetail Component Styles
+   ============================================================================= */
+
+.contact-detail {
+  background: white;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+/* -----------------------------------------------------------------------------
+   Header Section
+   ----------------------------------------------------------------------------- */
+.contact-detail-header {
+  background: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-800) 100%);
+  color: white;
+  padding: var(--space-8);
+}
+
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--space-6);
+  transition: all var(--transition-base);
+}
+
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-back:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+/* -----------------------------------------------------------------------------
+   Contact Info
+   ----------------------------------------------------------------------------- */
+.contact-detail-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-6);
+}
+
+.contact-detail-main h1 {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--space-2);
+  color: white;
+}
+
+.contact-detail-role {
+  font-size: var(--text-lg);
+  opacity: 0.95;
+  margin-bottom: var(--space-1);
+}
+
+.contact-detail-company {
+  font-size: var(--text-lg);
+  opacity: 0.9;
+  margin-bottom: var(--space-3);
+}
+
+.contact-detail-email {
+  font-size: var(--text-sm);
+  opacity: 0.85;
+}
+
+.contact-detail-email a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  transition: border-color var(--transition-fast);
+}
+
+.contact-detail-email a:hover {
+  border-color: white;
+}
+
+.contact-detail-email a:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-sm);
+}
+
+/* -----------------------------------------------------------------------------
+   Stats
+   ----------------------------------------------------------------------------- */
+.contact-detail-stats {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.stat-large {
+  font-family: var(--font-heading);
+  font-size: var(--text-4xl);
+  font-weight: var(--font-bold);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: var(--text-sm);
+  opacity: 0.9;
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-medium);
+}
+
+.stat-small {
+  font-size: var(--text-sm);
+  opacity: 0.8;
+}
+
+/* -----------------------------------------------------------------------------
+   Tags
+   ----------------------------------------------------------------------------- */
+.contact-detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-6);
+}
+
+.tag-large {
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+}
+
+/* -----------------------------------------------------------------------------
+   Actions Toolbar
+   ----------------------------------------------------------------------------- */
+.contact-detail-actions {
+  padding: var(--space-4) var(--space-8);
+  border-bottom: 1px solid var(--color-gray-200);
+  display: flex;
+  gap: var(--space-4);
+  background: var(--color-gray-50);
+}
+
+.btn-block {
+  flex: 1;
+}
+
+/* Danger button uses consistent danger color */
+.btn-danger {
+  background: var(--color-danger-500);
+  color: white;
+}
+
+.btn-danger:hover {
+  background: var(--color-danger-600);
+}
+
+.btn-danger:focus {
+  box-shadow: 0 0 0 3px var(--color-danger-100);
+}
+
+/* -----------------------------------------------------------------------------
+   Body / Interaction History
+   ----------------------------------------------------------------------------- */
+.contact-detail-body {
+  padding: var(--space-8);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-6);
+}
+
+.section-title svg {
+  color: var(--color-primary-500);
+}
+
+/* -----------------------------------------------------------------------------
+   Empty State
+   ----------------------------------------------------------------------------- */
+.empty-interactions {
+  text-align: center;
+  padding: var(--space-12) var(--space-8);
+  color: var(--color-gray-400);
+}
+
+.empty-interactions svg {
+  margin: 0 auto var(--space-4);
+  opacity: 0.3;
+}
+
+.empty-interactions p {
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-1);
+}
+
+.empty-subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
+}
+
+/* -----------------------------------------------------------------------------
+   Responsive
+   ----------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .contact-detail-header {
+    padding: var(--space-6);
+  }
+  
+  .contact-detail-info {
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+  
+  .contact-detail-stats {
+    text-align: left;
+  }
+  
+  .contact-detail-actions {
+    flex-direction: column;
+    padding: var(--space-4);
+  }
+  
+  .contact-detail-body {
+    padding: var(--space-4);
+  }
+}

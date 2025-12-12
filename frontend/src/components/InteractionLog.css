@@ -1,0 +1,107 @@
+/* =============================================================================
+   InteractionLog Component Styles
+   ============================================================================= */
+
+.interaction-log {
+  border-left: 4px solid var(--color-primary-500);
+  padding: var(--space-4) var(--space-4) var(--space-4) var(--space-5);
+  margin-bottom: var(--space-4);
+  background: var(--color-gray-50);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  transition: all var(--transition-base);
+}
+
+.interaction-log:hover {
+  background: var(--color-gray-100);
+}
+
+.interaction-log:focus-within {
+  box-shadow: var(--focus-ring);
+}
+
+/* Last item shouldn't have margin */
+.interaction-log:last-child {
+  margin-bottom: 0;
+}
+
+/* -----------------------------------------------------------------------------
+   Header
+   ----------------------------------------------------------------------------- */
+.interaction-log-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.interaction-log-icon {
+  padding: var(--space-2);
+  background: var(--color-primary-100);
+  color: var(--color-primary-600);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.interaction-log-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  flex: 1;
+}
+
+.interaction-log-type {
+  font-family: var(--font-heading);
+  font-weight: var(--font-semibold);
+  color: var(--color-gray-900);
+}
+
+.interaction-log-separator {
+  color: var(--color-gray-300);
+}
+
+.interaction-log-date,
+.interaction-log-duration {
+  color: var(--color-gray-500);
+}
+
+/* -----------------------------------------------------------------------------
+   Delete Button
+   ----------------------------------------------------------------------------- */
+.interaction-log-delete {
+  background: none;
+  border: none;
+  color: var(--color-gray-400);
+  cursor: pointer;
+  padding: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.interaction-log-delete:hover {
+  background: var(--color-danger-100);
+  color: var(--color-danger-500);
+}
+
+.interaction-log-delete:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-danger-200);
+}
+
+/* -----------------------------------------------------------------------------
+   Notes
+   ----------------------------------------------------------------------------- */
+.interaction-log-notes {
+  font-family: var(--font-body);
+  color: var(--color-gray-600);
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-sm);
+}
